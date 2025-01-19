@@ -1,12 +1,20 @@
 #!/bin/bash
 
-# Check if domain is provided
+# Check if domain is provided, otherwise prompt the user
 if [ -z "$1" ]; then
-  echo "Usage: $0 <domain>"
+  read -p "Enter the domain to check: " DOMAIN
+else
+  DOMAIN=$1
+fi
+
+# Ensure domain is provided
+if [ -z "$DOMAIN" ]; then
+  echo "❌ No domain provided. Exiting."
   exit 1
 fi
 
-DOMAIN=$1
+echo "Checking if domain '$DOMAIN' is suitable for XTLS-Reality..."
+echo
 
 # Step 0: Check for necessary software
 echo "Checking for required software..."

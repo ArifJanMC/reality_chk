@@ -27,6 +27,13 @@ The script depends on the following tools:
 
 ---
 
+## Quick Start
+
+Run the script directly without downloading:
+```bash
+bash <(curl -s https://raw.githubusercontent.com/ArifJanMC/reality_chk/main/reality_chk.sh)
+```
+
 ## Installation
 
 ### 1. Install Required Software
